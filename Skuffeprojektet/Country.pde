@@ -47,7 +47,7 @@ class Country{
     textSize(40);
     text(country.toUpperCase(), bigBracketX + textDistanceX, bigBracketY + textDistanceY);
     
-    // tjek om det er gruppe a/c eller gruppe b/d
+    // tjek om det er gruppe a/c eller gruppe b/d eller en hel anden gruppe
     if(group.name.equals("Group A") || group.name.equals("Group C")){
       
       fill(groupAC);

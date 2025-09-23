@@ -25,6 +25,7 @@
 // Flyttet group rektangel ved højre side af bracket farverne til globale scope i main sketch tab
 // Lavet string arrays til hver gruppe som nok skal ændres eller erstattes
 // Tilføjet fejl besked hvis man vælger et gruppe navn som ikke er A, B, C eller D
+// Fjernet unødvendig gruppe farve parameter fra group class siden der allerede er en if statement i country som tjekker gruppe navn og vælger en farve som passer den
 
 String[] groupA = {"Russia", "Saudi Arabia", "Egypt", "Uruguay"};
 String[] groupB = {"Portugal", "Spain", "Morocco", "Iran"};
@@ -49,7 +50,7 @@ color groupBDColor = color(255, 255, 85);
 
 void setup(){
   
-  Group A = new Group("Group E", groupACColor, groupABracketX, groupABracketY);
+  Group A = new Group("Group B", groupABracketX, groupABracketY);
   Country russia = new Country(A, "Russia");
   Country saudiArabia = new Country(A, "Saudi Arabia");
   Country egypt = new Country(A, "Egypt");
