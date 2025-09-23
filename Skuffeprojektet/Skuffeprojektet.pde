@@ -5,6 +5,7 @@
 // Tror højre side skal være mørkere end venstre side
 // Find bedre font til lande navn tekst
 // Lav arrays til hver gruppe
+// Lav group class
 
 // 1. september:
 // Fik lavet group A og B store brackets
