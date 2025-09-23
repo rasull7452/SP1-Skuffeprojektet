@@ -50,7 +50,7 @@ color groupBDColor = color(255, 255, 85);
 
 void setup(){
   
-  Group A = new Group("Group B", groupABracketX, groupABracketY);
+  Group A = new Group("Group A", groupABracketX, groupABracketY);
   Country russia = new Country(A, "Russia");
   Country saudiArabia = new Country(A, "Saudi Arabia");
   Country egypt = new Country(A, "Egypt");
