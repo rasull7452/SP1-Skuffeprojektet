@@ -1,9 +1,9 @@
 // TODO:
-// En eller anden loop for at få alle lande til at være der
-// Gruppe tekst til hver gruppe (til sidst)
+// En eller anden loop for at få alle lande til at være der (FÆRDIG)
+// Gruppe tekst til hver gruppe (til sidst) (FÆRDIG)
 // Tror højre side skal være mørkere end venstre side
-// Find bedre font til lande navn tekst
-// Lav arrays til hver gruppe 
+// Find bedre font til lande navn tekst (FÆRDIG)
+// Lav arrays til hver gruppe (FÆRDIG)
 // Lav group class (FÆRDIG)
 
 // 1. september:
@@ -30,6 +30,11 @@
 // Ændret lidt på width af brackets
 // Lavet group objekt til hver gruppe
 // Lavet country arrays til alle lande
+
+// 24. september
+// Lagt alle for loops i en loop
+// Lavet fonts til tekst
+// Lavet gruppe tekst til hver gruppe
 
 int groupBigBracketDist = 55;
 
@@ -84,48 +89,36 @@ void setup(){
   
   size(1240,534);
   background(#24334D);
-
-  // GROUP A
-  for(int i = 0; i < groupACountries.length; i++){
+  
+  groupA.display(230, -5);
+  groupB.display(230, -5);
+  groupC.display(230, -5);
+  groupD.display(230, -5);
+  // GROUPS 
+  for(int i = 0; i < groupBCountries.length; i++){
     
+    // GROUP A
     groupACountries[i].display();
     groupA.groupY += groupBigBracketDist;
     
-  }
-  
-  // GROUP B
-  for(int i = 0; i < groupBCountries.length; i++){
-    
+    // GROUP B
     groupBCountries[i].display();
     groupB.groupY += groupBigBracketDist;
     
-  }
-  
-  // GROUP C
-  for(int i = 0; i < groupCCountries.length; i++){
-    
+    // GROUP C
     groupCCountries[i].display();
     groupC.groupY += groupBigBracketDist;
     
-  }
-  
-  // GROUP D
-  for(int i = 0; i < groupDCountries.length; i++){
-    
+    // GROUP D
     groupDCountries[i].display();
     groupD.groupY += groupBigBracketDist;
     
+    
   }
-  
   
   //c.display(groupABracketX, groupABracketY);
   stroke(255);
   strokeWeight(4);
   line(width/2, 0, width/2, height);
   
-}
-
-void draw(){
-
-
 }

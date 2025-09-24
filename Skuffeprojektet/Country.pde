@@ -7,7 +7,7 @@ class Country{
   
   int flagSize = 90;
   
-  int bigBracketWidth = 590;
+  int bigBracketWidth = 587;
   int bigBracketHeight = 46;
   
   color groupAC = color(99, 215, 250);
@@ -19,6 +19,8 @@ class Country{
   int edgeRectWidth = 15;
   
   Group group;
+  
+  PFont soleSansMedium;
   
   String country;
   
@@ -32,6 +34,7 @@ class Country{
   
   void display(){
     
+    soleSansMedium = createFont("sole-sans-medium.ttf", 40);
     PImage img = loadImage(country + ".png");
     
     // lav den store bracket
@@ -40,8 +43,8 @@ class Country{
     rect(group.groupX, group.groupY, bigBracketWidth, bigBracketHeight);
     
     // skriv landets navn
-    fill(0);
-    textSize(40);
+    fill(#132338);
+    textFont(soleSansMedium);
     text(country.toUpperCase(), group.groupX + textDistanceX, group.groupY + textDistanceY);
     
     // tjek om det er gruppe a/c eller gruppe b/d eller en hel anden gruppe
