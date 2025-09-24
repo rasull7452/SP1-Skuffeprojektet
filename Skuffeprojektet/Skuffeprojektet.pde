@@ -26,80 +26,102 @@
 // Lavet string arrays til hver gruppe som nok skal ændres eller erstattes
 // Tilføjet fejl besked hvis man vælger et gruppe navn som ikke er A, B, C eller D
 // Fjernet unødvendig gruppe farve parameter fra group class siden der allerede er en if statement i country som tjekker gruppe navn og vælger en farve som passer den
+// Lavet for loops
+// Ændret lidt på width af brackets
+// Lavet group objekt til hver gruppe
+// Lavet country arrays til alle lande
 
-String[] groupA = {"Russia", "Saudi Arabia", "Egypt", "Uruguay"};
-String[] groupB = {"Portugal", "Spain", "Morocco", "Iran"};
-String[] groupC = {"France", "Australia", "Peru", "Denmark"};
-String[] groupD = {"Argentina", "Iceland", "Croatia", "Nigeria"};
+int groupBigBracketDist = 55;
 
 int groupABracketX = 0;
-int groupABracketY = 32;
+int groupABracketY = 40;
 
-int groupBBracketX;
-int groupBBracketY;
+int groupBBracketY = 310;
 
-int groupCBracketX;
-int groupCBracketY;
+int groupCBracketX = 630;
+int groupCBracketY = 40;
 
-int groupDBracketX;
-int groupDBracketY;
+int groupDBracketY = 310;
 
 color groupACColor = color(99, 215, 250);
 color groupBDColor = color(255, 255, 85);
 
 
 void setup(){
+
+  Group groupA = new Group("Group A", groupABracketX, groupABracketY);
+  Country[] groupACountries = {
+  new Country(groupA, "Russia"),
+  new Country(groupA, "Saudi Arabia"),
+  new Country(groupA, "Egypt"),
+  new Country(groupA, "Uruguay"),
+  };
   
-  Group A = new Group("Group A", groupABracketX, groupABracketY);
-  Country russia = new Country(A, "Russia");
-  Country saudiArabia = new Country(A, "Saudi Arabia");
-  Country egypt = new Country(A, "Egypt");
-  Country uruguay = new Country(A, "Uruguay");
+  Group groupB = new Group("Group B", groupABracketX, groupBBracketY);
+  Country[] groupBCountries = {
+  new Country(groupB, "Portugal"),
+  new Country(groupB, "Spain"),
+  new Country(groupB, "Morocco"),
+  new Country(groupB, "Iran"),
+  };
   
+  Group groupC = new Group("Group C", groupCBracketX, groupCBracketY);
+  Country[] groupCCountries = {
+  new Country(groupC, "France"),
+  new Country(groupC, "Australia"),
+  new Country(groupC, "Peru"),
+  new Country(groupC, "Denmark"),
+  };
+  
+  Group groupD = new Group("Group D", groupCBracketX, groupDBracketY);
+  Country[] groupDCountries = {
+  new Country(groupD, "Argentina"),
+  new Country(groupD, "Iceland"),
+  new Country(groupD, "Croatia"),
+  new Country(groupD, "Nigeria"),
+  };
 
   
   size(1240,534);
   background(#24334D);
+
+  // GROUP A
+  for(int i = 0; i < groupACountries.length; i++){
+    
+    groupACountries[i].display();
+    groupA.groupY += groupBigBracketDist;
+    
+  }
   
-  russia.display(groupABracketX, groupABracketY);
-  saudiArabia.display(groupABracketX, groupABracketY + 55);
-  egypt.display(groupABracketX, groupABracketY + 110);
-  uruguay.display(groupABracketX, groupABracketY + 165);
+  // GROUP B
+  for(int i = 0; i < groupBCountries.length; i++){
+    
+    groupBCountries[i].display();
+    groupB.groupY += groupBigBracketDist;
+    
+  }
+  
+  // GROUP C
+  for(int i = 0; i < groupCCountries.length; i++){
+    
+    groupCCountries[i].display();
+    groupC.groupY += groupBigBracketDist;
+    
+  }
+  
+  // GROUP D
+  for(int i = 0; i < groupDCountries.length; i++){
+    
+    groupDCountries[i].display();
+    groupD.groupY += groupBigBracketDist;
+    
+  }
   
   
   //c.display(groupABracketX, groupABracketY);
   stroke(255);
   strokeWeight(4);
   line(width/2, 0, width/2, height);
-  
-  
-  
-  //// GROUP A
-  //// RUSSIA (1)
-  //rect(groupABracketX, groupABracketY, bigBracketWidth, bigBracketHeight);
-  
-  //// SAUDI ARABIA (2)
-  //rect(groupABracketX, groupABracketY + 60, bigBracketWidth, bigBracketHeight);
-  
-  //// EGYPT (3)
-  //rect(groupABracketX, groupABracketY + 120, bigBracketWidth, bigBracketHeight);
-  
-  //// URUGAY(4)
-  //rect(groupABracketX, groupABracketY + 180, bigBracketWidth, bigBracketHeight);
-  
-  //// GROUP B
-  //groupBBracketY = groupABracketY + 280;
-  //// RUSSIA (1)
-  //rect(groupABracketX, groupBBracketY, bigBracketWidth, bigBracketHeight);
-  
-  //// SAUDI ARABIA (2)
-  //rect(groupABracketX, groupBBracketY + 60, bigBracketWidth, bigBracketHeight);
-  
-  //// EGYPT (3)
-  //rect(groupABracketX, groupBBracketY + 120, bigBracketWidth, bigBracketHeight);
-  
-  //// URUGAY(4)
-  //rect(groupABracketX, groupBBracketY + 180, bigBracketWidth, bigBracketHeight);
   
 }
 

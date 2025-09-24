@@ -7,7 +7,7 @@ class Country{
   
   int flagSize = 90;
   
-  int bigBracketWidth = 595;
+  int bigBracketWidth = 590;
   int bigBracketHeight = 46;
   
   color groupAC = color(99, 215, 250);
@@ -30,22 +30,19 @@ class Country{
   
   }
   
-  void display(int bigBracketX, int bigBracketY){
-    
-    this.bigBracketX = bigBracketX;
-    this.bigBracketY = bigBracketY;
+  void display(){
     
     PImage img = loadImage(country + ".png");
     
     // lav den store bracket
     fill(255);
     noStroke();
-    rect(bigBracketX, bigBracketY, bigBracketWidth, bigBracketHeight);
+    rect(group.groupX, group.groupY, bigBracketWidth, bigBracketHeight);
     
     // skriv landets navn
     fill(0);
     textSize(40);
-    text(country.toUpperCase(), bigBracketX + textDistanceX, bigBracketY + textDistanceY);
+    text(country.toUpperCase(), group.groupX + textDistanceX, group.groupY + textDistanceY);
     
     // tjek om det er gruppe a/c eller gruppe b/d eller en hel anden gruppe
     if(group.name.equals("Group A") || group.name.equals("Group C")){
@@ -66,10 +63,10 @@ class Country{
     noStroke();
     
     // blå/gul rektangel ved enden af bracket
-    rect(bigBracketX + bigBracketWidth, bigBracketY, edgeRectWidth, bigBracketHeight);
+    rect(group.groupX + bigBracketWidth, group.groupY, edgeRectWidth, bigBracketHeight);
     
     // lav flaget til landet
-    image(img, bigBracketX, bigBracketY, flagSize, bigBracketHeight);
+    image(img, group.groupX, group.groupY, flagSize, bigBracketHeight);
       
   }
 }
