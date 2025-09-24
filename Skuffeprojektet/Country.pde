@@ -10,8 +10,8 @@ class Country{
   int bigBracketWidth = 587;
   int bigBracketHeight = 46;
   
-  color groupAC = color(99, 215, 250);
-  color groupBD = color(255, 255, 85);
+  color groupColorAC = color(99, 215, 250);
+  color groupColorBD = color(255, 255, 85);
   
   int textDistanceY = 37;
   int textDistanceX = 110;
@@ -50,11 +50,11 @@ class Country{
     // tjek om det er gruppe a/c eller gruppe b/d eller en hel anden gruppe
     if(group.name.equals("Group A") || group.name.equals("Group C")){
       
-      fill(groupAC);
+      fill(groupColorAC);
       
     }else if(group.name.equals("Group B") || group.name.equals("Group D")){
     
-      fill(groupBD);
+      fill(groupColorBD);
         
     }else{
       
