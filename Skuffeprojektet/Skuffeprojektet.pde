@@ -54,9 +54,6 @@ int groupDBracketY = 310;
 int groupTxtDistX = 230;
 int groupTxtDistY = -5;
 
-color groupACColor = color(99, 215, 250);
-color groupBDColor = color(255, 255, 85);
-
 
 void setup(){
 
