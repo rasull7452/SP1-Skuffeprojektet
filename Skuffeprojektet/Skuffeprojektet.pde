@@ -36,6 +36,9 @@
 // Lavet fonts til tekst
 // Lavet gruppe tekst til hver gruppe
 
+// 25. september
+// Lavet nogle værdier om til variabler
+
 int groupBigBracketDist = 55;
 
 int groupABracketX = 0;
@@ -47,6 +50,9 @@ int groupCBracketX = 630;
 int groupCBracketY = 40;
 
 int groupDBracketY = 310;
+
+int groupTxtDistX = 230;
+int groupTxtDistY = -5;
 
 color groupACColor = color(99, 215, 250);
 color groupBDColor = color(255, 255, 85);
@@ -90,10 +96,12 @@ void setup(){
   size(1240,534);
   background(#24334D);
   
-  groupA.display(230, -5);
-  groupB.display(230, -5);
-  groupC.display(230, -5);
-  groupD.display(230, -5);
+  // Group texts
+  groupA.display(groupTxtDistX, groupTxtDistY);
+  groupB.display(groupTxtDistX, groupTxtDistY);
+  groupC.display(groupTxtDistX, groupTxtDistY);
+  groupD.display(groupTxtDistX, groupTxtDistY);
+  
   // GROUPS 
   for(int i = 0; i < groupBCountries.length; i++){
     
