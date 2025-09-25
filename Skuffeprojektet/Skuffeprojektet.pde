@@ -38,6 +38,7 @@
 
 // 25. september
 // Lavet nogle værdier om til variabler
+// Fjernet group farverne fra global scope da de ik blev brugt
 
 int groupBigBracketDist = 55;
 
@@ -56,7 +57,7 @@ int groupTxtDistY = -5;
 
 
 void setup(){
-
+  
   Group groupA = new Group("Group A", groupABracketX, groupABracketY);
   Country[] groupACountries = {
   new Country(groupA, "Russia"),
@@ -121,9 +122,9 @@ void setup(){
     
   }
   
-  //c.display(groupABracketX, groupABracketY);
-  stroke(255);
-  strokeWeight(4);
-  line(width/2, 0, width/2, height);
+  // Hvid linje
+    stroke(255);
+    strokeWeight(4);
+    line(width/2, 0, width/2, height);
   
 }
